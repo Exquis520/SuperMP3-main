@@ -9,7 +9,7 @@ class VideoProcessor {
         // 定义支持的格式
         this.supportedFormats = {
             audio: ['mp3', 'aac', 'wav', 'flac'],
-            video: ['mp4', 'mkv', 'avi']  // 为未来扩展预留
+            video: ['mp4', 'mkv', 'avi', 'mov']  // 添加 mov 格式
         };
     }
 
@@ -475,7 +475,7 @@ class App {
                 multiple: true,
                 filters: [{
                     name: 'Video Files',
-                    extensions: ['mp4', 'mkv', 'avi']
+                    extensions: ['mp4', 'mkv', 'avi', 'mov']  // 添加 mov 格式
                 }]
             });
             

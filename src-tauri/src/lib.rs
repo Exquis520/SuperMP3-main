@@ -43,6 +43,7 @@ async fn pick_file(app_handle: tauri::AppHandle) -> Option<String> {
     
     app_handle.dialog()
         .file()
+        .add_filter("Video", &["mp4", "mkv", "avi", "mov"]) // 添加 mov 格式支持
         .add_filter("Audio", &["mp3", "wav", "flac"])
         .pick_file(move |file_path| {
             if let Some(path) = file_path {
