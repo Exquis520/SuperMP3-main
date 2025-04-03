@@ -14,10 +14,18 @@ SuperMP3 是一个使用 Tauri + 原生 HTML/CSS/JavaScript 开发的音频转�
 
 ## 开发环境要求
 
+- macOS (Apple M2 芯片系列)
 - [Node.js](https://nodejs.org/) (推荐 v18 或更高版本)
 - [Rust](https://www.rust-lang.org/) (最新稳定版)
 - [VS Code](https://code.visualstudio.com/) (推荐)
-- FFmpeg (用于音频处理)
+- FFmpeg (用于音频处理, 可通过 `brew install ffmpeg` 安装)
+
+### 系统特定说明
+
+对于 Apple Silicon (M2系列) Mac 用户：
+- 确保安装了 Xcode Command Line Tools: `xcode-select --install`
+- 建议使用 Homebrew 安装依赖: `brew install ffmpeg`
+- Rust 工具链会自动适配 ARM 架构
 
 ### 推荐的 VS Code 插件
 
@@ -32,25 +40,19 @@ git clone <repository-url>
 cd SuperMP3
 ```
 
-2. 安装依赖
+2. 安装依赖并运行
 ```bash
-# 安装 Rust 依赖
+# 进入 Rust 项目目录
 cd src-tauri
+
+# 检查依赖
 cargo check
 
-# 安装前端依赖
-cd ..
-npm install
-```
+# 运行开发版本
+cargo run
 
-3. 开发运行
-```bash
-npm run tauri dev
-```
-
-4. 构建应用
-```bash
-npm run tauri build
+# 构建发布版本
+cargo build --release
 ```
 
 ## 使用说明
