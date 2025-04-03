@@ -1,6 +1,6 @@
 # SuperMP3
 
-SuperMP3 是一个使用 Tauri + 原生 HTML/CSS/JavaScript 开发的音频转换工具，支持从视频文件中提取并转换音频。
+SuperMP3 是一个使用 Tauri + 原生 HTML/CSS/JavaScript 开发的音频转换工具，支持从视频文件中提取并转换音频，当前只支持macOS Apple Silicon 芯片系列。
 
 ## 功能特性
 
